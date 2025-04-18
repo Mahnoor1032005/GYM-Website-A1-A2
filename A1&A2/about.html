@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About - ROSHAN GYM</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="picsA3/icon.png" />
+</head>
+<body class="custom-bg">
+
+    <header>
+        <div class="header-container flex justify-between items-center px-8 h-16">
+            <div class="logo">
+                <img src="picsA3/LOGO.png" alt="Gym Logo" class="w-24 h-auto" />
+            </div>
+            <input type="checkbox" id="menu-toggle" class="hidden" />
+            <label for="menu-toggle" class="mobile-menu-toggle text-white text-3xl cursor-pointer block md:hidden" aria-label="Toggle menu">☰</label>
+            <nav class="nav-menu hidden md:flex">
+                <ul class="flex flex-col md:flex-row md:justify-end list-none gap-6 pr-0 ml-auto">
+                    <li><a href="index.html" class="text-white font-bold text-base no-underline hover:text-green-700 block px-4 py-2">Home</a></li>
+                    <li><a href="about.html" class="text-white font-bold text-base no-underline hover:text-green-700 block px-4 py-2">About</a></li>
+                    <li><a href="services.html" class="text-white font-bold text-base no-underline hover:text-green-700 block px-4 py-2">Services</a></li>
+                    <li><a href="testimonials.html" class="text-white font-bold text-base no-underline hover:text-green-700 block px-4 py-2">Reviews</a></li>
+                    <li><a href="package.html" class="text-white font-bold text-base no-underline hover:text-green-700 block px-4 py-2">Package</a></li>
+                    <li><a href="contact.html" class="text-white font-bold text-base no-underline hover:text-green-700 block px-4 py-2">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="about" class="about py-20 bg-green-900">
+        <h2 class="text-4xl text-center mb-12 text-white">About Us</h2>
+        <div class="about-content flex max-w-7xl mx-auto gap-12 text-white">
+            <img src="picsA3/pexels-airamdphoto-13106582.jpg" alt="Our Gym" class="w-1/2 rounded-lg shadow-lg" />
+            <div class="about-text w-1/2">
+                <p class="mb-4 text-lg">We are a premier fitness center dedicated to helping you achieve your health and wellness goals. Our state-of-the-art facilities and expert trainers provide the perfect environment for your transformation.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p class="text-white text-center py-8">&copy; 2023 Gym Fitness. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
