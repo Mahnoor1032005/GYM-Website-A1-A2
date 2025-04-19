@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact Us - ROSHAN GYM</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="pics/icon.png" />
+</head>
+<body class="custom-bg">
+    <header>
+        <div class="mobile-header flex justify-between items-center w-full p-4 bg-[#1e271e] fixed top-0 z-50">
+            <div class="logo">
+                <img src="pics/LOGO.png" alt="Gym Logo" class="h-12" />
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        <nav class="nav-menu fixed top-16 right-0 w-64 h-[calc(100vh-4rem)] bg-[#1e271e] transform translate-x-full transition-transform duration-300 md:static md:transform-none md:flex md:justify-center md:h-auto md:w-auto md:bg-transparent">
+            <ul class="flex flex-col md:flex-row md:space-x-8 p-8 md:p-0 text-white">
+                <li><a href="index.html" class="block py-2 md:py-0 hover:text-green-700 font-bold">Home</a></li>
+                <li><a href="about.html" class="block py-2 md:py-0 hover:text-green-700 font-bold">About</a></li>
+                <li><a href="services.html" class="block py-2 md:py-0 hover:text-green-700 font-bold">Services</a></li>
+                <li><a href="testimonials.html" class="block py-2 md:py-0 hover:text-green-700 font-bold">Reviews</a></li>
+                <li><a href="package.html" class="block py-2 md:py-0 hover:text-green-700 font-bold">Package</a></li>
+                <li><a href="contact.html" class="block py-2 md:py-0 hover:text-green-700 font-bold">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="testimonials">
+        <h2>What Our Members Say</h2>
+        <div class="testimonial-slider">
+            <div class="testimonial active">
+                <p>"This gym changed my life! The trainers are amazing."</p>
+                <span>- John D.</span>
+            </div>
+            <div class="testimonial">
+                <p>"Best equipment and friendly atmosphere. Highly recommend!"</p>
+                <span>- Sarah M.</span>
+            </div>
+            <div class="testimonial">
+                <p>"I've never felt better since joining this gym."</p>
+                <span>- Mike T.</span>
+            </div>
+            <div class="slider-controls">
+                <button class="prev">❮</button>
+                <button class="next">❯</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scroll to top button -->
+    <a href="#top" class="scroll-to-top fixed bottom-5 right-5 w-12 h-12 bg-green-700 text-white rounded-full flex items-center justify-center text-2xl font-bold hover:bg-green-900 transition-opacity opacity-80">
+        ↑
+    </a>
+
+    <footer class="mt-12">
+        <p class="text-white">&copy; 2023 Gym Fitness. All rights reserved.</p>
+    </footer>
+    <script>
+        const menuToggle = document.querySelector('.mobile-menu-toggle');
+        const navMenu = document.querySelector('.nav-menu ul');
+
+        menuToggle.addEventListener('click', () => {
+            const expanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
+            menuToggle.setAttribute('aria-expanded', !expanded);
+            navMenu.classList.toggle('active');
+        });
+
+        // Testimonial slider functionality
+        const testimonials = document.querySelectorAll('.testimonial');
+        const prevBtn = document.querySelector('.prev');
+        const nextBtn = document.querySelector('.next');
+        let currentIndex = 0;
+
+        function showTestimonial(index) {
+            testimonials.forEach((testimonial, i) => {
+                testimonial.classList.toggle('active', i === index);
+            });
+        }
+
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
+            showTestimonial(currentIndex);
+        });
+
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % testimonials.length;
+            showTestimonial(currentIndex);
+        });
+    </script>
+</body>
+</html>

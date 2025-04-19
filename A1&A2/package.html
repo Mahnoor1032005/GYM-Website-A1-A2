@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Packages - ROSHAN GYM</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="pics/icon.png">
+</head>
+<body class="custom-bg">
+    <header>
+        <div class="mobile-header">
+            <div class="logo">
+                <img src="pics/LOGO.png" alt="Gym Logo" />
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="testimonials.html">Reviews</a></li> 
+                <li><a href="package.html">Package</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="packages">
+        <div class="package-list">
+            <div class="package-card">
+<img src="pics/pexels-olly-3768916.jpg" alt="Basic Package" />
+                <div class="package-content">
+                    <h3>Basic Package</h3>
+                    <p>Access to gym equipment and locker room.</p>
+                    <p>Price: $30/month</p>
+                </div>
+            </div>
+            <div class="package-card">
+                <img src="pics/pexels-cottonbro-7689289.jpg" alt="Standard Package" />
+                <div class="package-content">
+                    <h3>Standard Package</h3>
+                    <p>Includes Basic plus group classes and personal training.</p>
+                    <p>Price: $50/month</p>
+                </div>
+            </div>
+            <div class="package-card">
+                <img src="pics/pexels-pavel-danilyuk-6295973.jpg" alt="Premium Package" />
+                <div class="package-content">
+                    <h3>Premium Package</h3>
+                    <p>All Standard features plus nutrition consultation and spa access.</p>
+                    <p>Price: $80/month</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scroll to top button -->
+    <a href="#top" class="scroll-to-top fixed bottom-5 right-5 w-12 h-12 bg-green-700 text-white rounded-full flex items-center justify-center text-2xl font-bold hover:bg-green-900 transition-opacity opacity-80">
+        ↑
+    </a>
+
+    <footer>
+        <p>&copy; 2023 Gym Fitness. All rights reserved.</p>
+    </footer>
+    </body>
+    <script>
+        const menuToggle = document.querySelector('.mobile-menu-toggle');
+        const navMenu = document.querySelector('.nav-menu ul');
+
+        menuToggle.addEventListener('click', () => {
+            const expanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
+            menuToggle.setAttribute('aria-expanded', !expanded);
+            navMenu.classList.toggle('active');
+        });
+    </script>
+</html>
